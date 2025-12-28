@@ -7,7 +7,6 @@
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
 */
 
 .page {
@@ -16,13 +15,13 @@
   font-family: var(--main-font), sans-serif;
   font-variation-settings: 'wght' var(--wght-text);
   background-image: var(--bg-all);
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-size: cover;
 }
 
 .header {
   inline-size: var(--block-width);
-  block-size:  var(--block-height); 
+  block-size:  var(--block-height);
   background-color: var(--main-background);
   display: flex;
   flex-direction: column;
@@ -31,7 +30,7 @@
   align-items: center;
   font-family: var(--accent-font), sans-serif;
   font-size: var(--header-font-size);
-  margin: 100px 0; 
+  margin: 100px 0;
   border: var(--border);
 }
 
@@ -72,7 +71,7 @@
   font-size: 18px;
   display: flex;
   flex-direction: column;
-  gap: 25px;  
+  gap: 25px;
 }
 
 .watermark {
@@ -108,13 +107,7 @@ or (text-stroke: 1px var(--main-background)) {
   border: var(--border);
   background-color: transparent;
   transition: box-shadow 0.3s ease;
-  cursor: pointer; 
-
-}
-
-.card__icon-button {
-  border: none;
-  background-color: transparent;
+  cursor: pointer;
 }
 
 .card__like-button {
@@ -231,6 +224,8 @@ or (text-stroke: 1px var(--main-background)) {
   block-size: 38px;
   transition: border 0.3s ease;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .card__icon-button:focus {
