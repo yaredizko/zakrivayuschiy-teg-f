@@ -3,12 +3,12 @@
     /* --wgth: 410; */
     --main-font: 'Inter-Variable';
     --accent-font: "PressStart2P";
-    --wght-title: 785;
+    --wght-title: 715;
     --wght-text: 410;
     --bg-all: 
-        repeating-linear-gradient(#d3d3d3, transparent 2px), 
-        repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
-        repeating-linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+        repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px), 
+        repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px), 
+        linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
     --block-width: clamp(320px, 100vw, 700px);
     --block-height: clamp(327px, 41vw ,368px);
     --headline-font-size: clamp(3.0625rem, 2.7365rem + 1.4733vw, 4.0625rem);
