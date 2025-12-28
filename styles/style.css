@@ -290,7 +290,7 @@ or (text-stroke: 1px var(--main-background)) {
   fill: var(--animation-fill-color);
 }
 
-.like-icon.is-liked .heart{
+.like-icon.is-liked .heart {
   transform-origin: center;
   animation: pulse 0.3s 1 normal ease-in 0.1s;
 }
