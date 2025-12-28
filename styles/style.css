@@ -13,4 +13,321 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wght' var(--wght-text);
+  background-image: var(--bg-all);
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+.header {
+  inline-size: var(--block-width);
+  block-size:  var(--block-height); 
+  background-color: var(--main-background);
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--accent-font), sans-serif;
+  font-size: var(--header-font-size);
+  margin: 100px 0; 
+  border: var(--border);
+}
+
+.headline {
+  font-size: var(--headline-font-size);
+}
+
+.section {
+  border: var(--border);
+  background-color: var(--main-background);
+  inline-size: var(--block-width);
+  justify-self: center;
+  margin-bottom: 50px;
+}
+
+.section-titile {
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--wght-title);
+  padding: 4px 10px;
+  border: var(--border);
+}
+
+.image {
+  position: relative;
+}
+
+.section-image {
+  aspect-ratio: 1;
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-text {
+  border-top: 2px solid #000;
+  margin-top: -4px;
+  padding: 25px;
+  line-height: 21px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;  
+}
+
+.watermark {
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 0.5;
+  text-shadow: -1px -1px var(--main-background), -1px 1px var(--main-background), 1px -1px var(--main-background), 1px 1px var(--main-background);
+  mix-blend-mode: hard-light;
+}
+
+@supports (-webkit-text-stroke: 1px var(--main-background)) 
+or (text-stroke: 1px var(--main-background)) {
+  .watermark {
+  text-shadow: unset;
+  -webkit-text-stroke: 1px var(--color-background);
+  text-stroke: 1px var(--color-background);
+  }
+}
+
+.like {
+  display: flex;
+  gap: 7px;
+  justify-self: end;
+  margin: 0 25px 25px 0;
+  align-items: center;
+}
+
+.button {
+  position: relative;
+  border: var(--border);
+  background-color: transparent;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer; 
+
+}
+
+.card__icon-button {
+  border: none;
+  background-color: transparent;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+}
+
+.button__text {
+  position: relative;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  line-height: 90%;
+  display: block;
+  z-index: 1;
+  color: var(--main-background);
+  background-color: var(--main-color);
+  mix-blend-mode: difference;
+}
+
+.button-save {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  inline-size: clamp(306px, 60%, 335px);
+  justify-self: center;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: var(--border);
+  background-color: var(--main-background);
+  line-height: 90%;
+  font-variation-settings: "wdth" 400;
+  padding: 15px 18px;
+  margin-bottom: 100px;
+}
+
+.save {
+  padding: 0;
+  height: 191px;
+  border: var(--border);
+  inline-size: clamp(341px, 100%, 353px);
+  overflow: hidden;
+}
+
+.save::backdrop {
+  background-color: var(--main-color);
+  opacity: 75%;
+}
+
+.floppy {
+  width: 21px;
+  height: 21px;
+  stroke: var(--main-background);
+  fill: var(--main-background);
+  mix-blend-mode: difference;
+}
+
+@media (width <= 375px) {
+  .floppy {
+    width: 28px;
+    height: 28px;
+  }
+
+  .button-save {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.dialog-info {
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  font-variation-settings: "wdth" 400;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 20px;
+  padding: 28px 38px;
+  align-items: center;
+}
+
+.button-save-close {
+  text-transform: uppercase;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--main-color);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--main-color);
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  scale: 1 1;
+}
+
+.card__icon-button {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  inline-size: 38px;
+  block-size: 38px;
+  transition: border 0.3s ease;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: var(--border);
+}
+
+.sparks {
+  fill: var(--animation-fill-color);
+  opacity: 0%;
+}
+
+.contour {
+  fill: var(--contour-color);
+  transition: fill 0.1s linear;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .core {
+  transition: fill 0.3s linear;
+  fill: var(--main-color);
+}
+
+.like-icon:hover .main-body {
+  transition: fill 0.3s linear 0.03s;
+  fill: var(--main-color);
+}
+
+.like-icon:active .core {
+  transition: fill 0.3s linear;
+  fill: var(--animation-fill-color);
+}
+
+.like-icon:active .main-body {
+  transition: fill 0.3s linear 0.05s;
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .main-body {
+  transition: fill 0.3s linear 0.05s;
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .contour {
+  transition: fill 0.3s linear 0.06s;
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .heart{
+  transform-origin: center;
+  animation: pulse 0.3s 1 normal ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: boom 0.3s 1 ease-in 0.3s;
+}
+
+.first {
+  filter: grayscale(0.5);
+}
+
+.first-fail {
+  filter: saturate(3);
+}
+
+.second {
+  filter: hue-rotate(0.1turn);
+}
+
+.second-anower {
+  filter: invert(80%);
+}
+
+.third {
+  filter: sepia(0.9);
+}
+
+.third-despair {
+  filter: blur(10px);
+}
+
+.now {
+  filter: hue-rotate(0.3turn) opacity(70%) contrast(1.1) saturate(1.5) brightness(70%) blur(1px) ;
 }

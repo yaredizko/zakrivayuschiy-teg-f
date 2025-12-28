@@ -1,1 +1,22 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    /* --wgth: 410; */
+    --main-font: 'Inter-Variable';
+    --accent-font: "PressStart2P";
+    --wght-title: 715;
+    --wght-text: 410;
+    --bg-all: 
+        repeating-linear-gradient(#d3d3d3, transparent 2px), 
+        repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+        repeating-linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+    --block-width: clamp(320px, 100vw, 700px);
+    --block-height: clamp(327px, 41vw ,368px);
+    --headline-font-size: clamp(3.0625rem, 2.7365rem + 1.4733vw, 4.0625rem);
+    --header-font-size: clamp(0.875rem, 0.6916rem + 0.8287vw, 1.4375rem);
+    --main-color: #000;
+    --main-background: #fff;
+    --contour-color: #000;
+    --animation-fill-color: red;
+    --border: 2px solid var(--main-color);
+}
+
