@@ -12,7 +12,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font, 'Inter-Variable'), sans-serif;
   font-variation-settings: 'wght' var(--wght-text);
   background-image: var(--bg-all);
   background-attachment: fixed;
